@@ -1,0 +1,7 @@
+/* frontend/src/components/Footer.css */
+.footer {
+  text-align: center;
+  background-color: #283747;
+  color: rgb(255, 136, 0);
+  padding: 20px;
+}
