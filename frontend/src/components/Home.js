@@ -6,16 +6,6 @@ import './Home.css';
 const Home = () => {
   const navigate = useNavigate();
 
-  // Navigate to the registration page
-  const handleGetStartedClick = () => {
-    navigate('/register'); 
-  };
-
-  // Navigate to the contact page
-  const handleContactUsClick = () => {
-    navigate('/contact');
-  };
-
   return (
     <div className="home-container">
       <h1>Welcome to FitMonitor</h1>
@@ -23,9 +13,10 @@ const Home = () => {
       <p>This is the homepage of FitMonitor, a comprehensive health and fitness tracking application.</p>
       <p>Start Your Fitness Journey Today</p>
       <div className="button-container">
-        <button onClick={handleGetStartedClick}>GET STARTED</button>
-        <button onClick={handleContactUsClick}>CONTACT US</button>
+        <button onClick={() => navigate('/register')}>GET STARTED</button>
+        <button onClick={() => navigate('/contact')}>CONTACT US</button>
       </div>
+      <ul className="navbar-links"></ul>
       <div>
         <h1>WHAT WE DO</h1>
         <p>Key Features:</p>
@@ -34,6 +25,7 @@ const Home = () => {
         <p>Stay Motivated: Visualize your progress with insightful charts and receive personalized insights to keep you motivated.</p>
         <p>Join a Community: Connect with fellow fitness enthusiasts, share your achievements, and embark on challenges together.</p>
       </div>
+      {/* Add more content as needed */}
     </div>
   );
 };

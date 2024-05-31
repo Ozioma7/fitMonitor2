@@ -1,16 +1,22 @@
-// frontend/src/components/Dashboard.js
-import React, { useState, useEffect } from 'react';
-import { useUser } from '../context/UserContext'; // Import useUser hook
+import React, { useContext, useState, useEffect } from 'react';
+import { UserContext } from '../components/UserContext';
 import './Dashboard.css';
 import ActivityCard from './ActivityCard';
 
+import runImage from '../assets/img/run.png';
+import swimImage from '../assets/img/swim.png';
+import cycleImage from '../assets/img/cycle.png';
+import yogaImage from '../assets/img/yoga.png';
+import gymImage from '../assets/img/gym.png';
+import skipImage from '../assets/img/skip.png';
+
 const activities = [
-  { id: 1, name: 'Running', image: '../assets/img/run.png' },
-  { id: 2, name: 'Swimming', image: '../assets/img/swim.png' },
-  { id: 3, name: 'Cycling', image: '../assets/img/cycle.png' },
-  { id: 4, name: 'Yoga', image: '../assets/img/yoga.png' },
-  { id: 5, name: 'Gym', image: '../assets/img/gym.png' },
-  { id: 6, name: 'Skipping', image: '../assets/img/skip.png' },
+  { id: 1, name: 'Running', image: runImage },
+  { id: 2, name: 'Swimming', image: swimImage },
+  { id: 3, name: 'Cycling', image: cycleImage },
+  { id: 4, name: 'Yoga', image: yogaImage },
+  { id: 5, name: 'Gym', image: gymImage },
+  { id: 6, name: 'Skipping', image: skipImage },
   // Add more activities as needed
 ];
 
@@ -20,10 +26,10 @@ const months = [
 ];
 
 const Dashboard = () => {
+  const { user } = useContext(UserContext);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [completedActivities, setCompletedActivities] = useState([]);
-  const { user } = useUser(); // Get user data from context
 
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
@@ -49,7 +55,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h1>Welcome, {user ? user.name : 'Guest'}!</h1>
+      <h1>Welcome {user ? user.name : 'Guest'}</h1>
       <p>Here you can track your fitness activities and monitor your progress.</p>
       <div className="filters">
         <label htmlFor="yearSelect">Select Year: </label>

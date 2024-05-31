@@ -10,8 +10,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send the message to the backend
-    setSuccessMessage('Your message has been sent!');
+    // Handle form submission (e.g., send data to the backend)
+    setSuccessMessage('Thank you for your message! We will get back to you soon.');
+    // Clear form fields
     setName('');
     setEmail('');
     setMessage('');
@@ -19,21 +20,21 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
+      <h2>Contact Us</h2>
       {successMessage && <p className="success-message">{successMessage}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Your Name"
+          placeholder="Name"
           required
         />
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Your Email"
+          placeholder="Email"
           required
         />
         <textarea
@@ -41,7 +42,7 @@ const Contact = () => {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Your Message"
           required
-        ></textarea>
+        />
         <button type="submit">Send Message</button>
       </form>
     </div>
