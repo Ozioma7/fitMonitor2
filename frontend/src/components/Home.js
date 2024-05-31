@@ -6,12 +6,14 @@ import './Home.css';
 const Home = () => {
   const navigate = useNavigate();
 
+  // Navigate to the registration page
   const handleGetStartedClick = () => {
-    navigate('/register'); // Navigate to the registration page
+    navigate('/register'); 
   };
 
+  // Navigate to the contact page
   const handleContactUsClick = () => {
-    navigate('/contact'); // Navigate to the contact page
+    navigate('/contact');
   };
 
   return (
