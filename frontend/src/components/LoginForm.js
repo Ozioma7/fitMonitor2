@@ -1,17 +1,19 @@
 // frontend/src/components/LoginForm.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
-import './LoginForm.css'; // Import the CSS file
+import './LoginForm.css';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await login({ email, password });
-      // Handle successful login (e.g., show success message, redirect)
+      navigate('/dashboard');
     } catch (error) {
       console.error(error);
     }

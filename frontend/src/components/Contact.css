@@ -1,0 +1,38 @@
+/* frontend/src/components/Contact.css */
+.contact-container {
+  padding: 20px;
+}
+
+.contact-container h1 {
+  margin-bottom: 20px;
+}
+
+.contact-container .success-message {
+  color: green;
+  margin-bottom: 20px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.contact-container form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-container form button:hover {
+  background-color: #45a049;
+}

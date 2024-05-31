@@ -1,18 +1,14 @@
+// frontend/src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5000/auth'; // Replace with your API URL
 
-// Register a new user
-export const register = (userData) => axios.post(`${API_URL}/register`, userData);
+export const register = async (userData) => {
+  const response = await axios.post(`${API_URL}/register`, userData);
+  return response.data;
+};
 
-// Login a user
-export const login = (userData) => axios.post(`${API_URL}/login`, userData);
-
-// Get activities for a user
-export const getActivities = (token) => {
-  return axios.get(`${API_URL}/activities`, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  });
+export const login = async (userData) => {
+  const response = await axios.post(`${API_URL}/login`, userData);
+  return response.data;
 };

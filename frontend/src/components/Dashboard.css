@@ -1,0 +1,15 @@
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+label, select {
+  margin: 10px;
+}
