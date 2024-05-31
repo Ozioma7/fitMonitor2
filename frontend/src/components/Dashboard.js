@@ -1,21 +1,16 @@
 // frontend/src/components/Dashboard.js
 import React, { useState, useEffect } from 'react';
+import { useUser } from '../context/UserContext'; // Import useUser hook
 import './Dashboard.css';
 import ActivityCard from './ActivityCard';
-import runningImg from '../assets/img/run.png';
-import swimmingImg from '../assets/img/swim.png';
-import cyclingImg from '../assets/img/cycle.png';
-import yogaImg from '../assets/img/yoga2.png';
-import gymImg from '../assets/img/gym.png';
-import skippingImg from '../assets/img/skip.png';
 
 const activities = [
-  { id: 1, name: 'Running', image: runningImg },
-  { id: 2, name: 'Swimming', image: swimmingImg },
-  { id: 3, name: 'Cycling', image: cyclingImg },
-  { id: 4, name: 'Yoga', image: yogaImg },
-  { id: 5, name: 'Gym', image: gymImg },
-  { id: 6, name: 'Skipping', image: skippingImg },
+  { id: 1, name: 'Running', image: '../assets/img/run.png' },
+  { id: 2, name: 'Swimming', image: '../assets/img/swim.png' },
+  { id: 3, name: 'Cycling', image: '../assets/img/cycle.png' },
+  { id: 4, name: 'Yoga', image: '../assets/img/yoga.png' },
+  { id: 5, name: 'Gym', image: '../assets/img/gym.png' },
+  { id: 6, name: 'Skipping', image: '../assets/img/skip.png' },
   // Add more activities as needed
 ];
 
@@ -28,6 +23,7 @@ const Dashboard = () => {
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [completedActivities, setCompletedActivities] = useState([]);
+  const { user } = useUser(); // Get user data from context
 
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
@@ -53,7 +49,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h1>Welcome to Your Dashboard</h1>
+      <h1>Welcome, {user ? user.name : 'Guest'}!</h1>
       <p>Here you can track your fitness activities and monitor your progress.</p>
       <div className="filters">
         <label htmlFor="yearSelect">Select Year: </label>
