@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo3 from '../assets/img/Logo3.png';
 
+// Navigation bar
 const Navbar = () => {
   return (
     <nav className="navbar">
