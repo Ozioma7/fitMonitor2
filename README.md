@@ -4,7 +4,7 @@ Description
 FitMonitor is a comprehensive health and fitness tracking application designed to empower individuals to lead healthier, more active lifestyles. With intuitive features for activity logging, progress tracking, and community support, FitMonitor provides users with the tools they need to set, monitor, and achieve their fitness goals. Seamlessly integrating frontend and backend components, FitMonitor offers a user-friendly experience while prioritizing data security and privacy. Join the FitMonitor community today and take control of your fitness journey.
 
 About Me
-My name is Ozioma Michael, ALX graduate with software engineer, backend specialized. I do have experience in Django and I did more than 3 projects, including this one, with MySQL database and HTML, CSS & some JavaScript.r. I love coding and I want to be web and application developer. I’m passionate about creating truly beautiful, efficient and problem solving softwares.
+My name is Ozioma Michael, ALX graduate with software engineer, backend specialized. I do have experience in NodeJS and I did more than 3 projects, including this one, with MySQL database and HTML, CSS & some JavaScript.r. I love coding and I want to be web and application developer. I’m passionate about creating truly beautiful, efficient and problem solving softwares.
 
 My linkedin: https://www.linkedin.com/in/ozioma1-michael/
 
